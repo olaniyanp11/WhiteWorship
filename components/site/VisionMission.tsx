@@ -11,8 +11,8 @@ const missions = [
 ];
 
 const stats = [
-  { value: "40+", label: "Nations reached through worship" },
-  { value: "12K", label: "Believers gathered annually" },
+  { value: "700+", label: "People gathered" },
+  { value: "2+", label: " country reached" },
 ];
 
 export function VisionMission() {
@@ -36,11 +36,11 @@ export function VisionMission() {
         </Reveal>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-2 grid-rows-[auto_auto] gap-2.5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_auto] gap-2.5">
 
           {/* Vision — tall left cell with image background */}
-          <Reveal className="col-span-1 row-span-2">
-            <article className="relative h-full min-h-[460px] overflow-hidden rounded-2xl border border-white/[0.08]">
+          <Reveal className="lg:col-span-1 lg:row-span-2">
+            <article className="relative h-full min-h-[350px] sm:min-h-[400px] lg:min-h-[460px] overflow-hidden rounded-2xl border border-white/[0.08]">
               <Image
                 src="/images/vision.jpg"
                 alt="Worship gathering with raised hands"
@@ -58,7 +58,7 @@ export function VisionMission() {
                 }}
               />
               {/* content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-7 lg:p-8">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-7 lg:p-8">
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[11px] border border-blue-400/25 bg-blue-400/[0.12] text-blue-400">
                   <Eye className="h-5 w-5" />
                 </div>
@@ -75,7 +75,7 @@ export function VisionMission() {
           </Reveal>
 
           {/* Mission list — top right */}
-          <Reveal delay={0.1} className="col-span-1 row-span-1">
+          <Reveal delay={0.1} className="lg:col-span-1 lg:row-span-1">
             <article className="h-full rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 lg:p-7">
               <div className="mb-5 flex items-center gap-3">
                 <div className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[10px] border border-blue-400/25 bg-blue-400/[0.1] text-blue-400">
@@ -99,7 +99,7 @@ export function VisionMission() {
           </Reveal>
 
           {/* Stats — bottom right */}
-          <Reveal delay={0.2} className="col-span-1 row-span-1">
+          <Reveal delay={0.2} className="lg:col-span-1 lg:row-span-1">
             <div className="grid h-full grid-cols-2 gap-2.5">
               {stats.map(({ value, label }) => (
                 <div

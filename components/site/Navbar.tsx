@@ -8,13 +8,10 @@ import Image from "next/image";
 
 const links = [
   { href: "/#home", label: "Home" },
-  { href: "/#about", label: "About" },
-  { href: "/#vision", label: "Vision" },
+  { href: "/#vision", label: "About Us (Vision)" },
+  { href: "/volunteer", label: "Become a Volunteer" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/register", label: "Register" },
-  { href: "/volunteer", label: "Volunteer" },
-  { href: "/#theme", label: "Theme" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export function Navbar() {

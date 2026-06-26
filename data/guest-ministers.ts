@@ -16,9 +16,9 @@ export interface GuestMinister {
 export const guestMinisters: GuestMinister[] = [
   {
     id: 1,
-    name: "Folarin Ayodeji",
-    ministry: "Pastor Askerr",
-    country: "Nigeria",
+    name: "BAYO AKINDUYITE",
+    ministry: "RYE Reg 11 & 19",
+    country: "NIGERIA",
     image: "/guest/guest4.jpeg",
     bio: "A gifted worship leader and songwriter with a passion for authentic worship encounters. Folarin has led worship experiences across Africa and Europe, touching thousands with the presence of God through music.",
     scripture: "Yet a time is coming and has now come when the true worshippers will worship the Father in Spirit and in truth.",
@@ -30,9 +30,9 @@ export const guestMinisters: GuestMinister[] = [
   },
   {
     id: 2,
-    name: "Ayo Olanrewaju",
-    ministry: "Grace International Church",
-    country: "United Kingdom",
+    name: "ASKA RAPHAEL",
+    ministry: "RCCG",
+    country: "NIGERIA",
     image: "/guest/guest2.jpeg",
     bio: "An anointed minister known for prophetic worship and deep spiritual encounters. Ayo's ministry combines music, prayer, and the Word of God to create transformative worship experiences.",
     scripture: "Sing to the Lord a new song; sing his praise from the ends of the earth.",
@@ -44,8 +44,8 @@ export const guestMinisters: GuestMinister[] = [
   },
   {
     id: 3,
-    name: "Tunde Oladele",
-    ministry: "Hillsong Lagos",
+    name: "OMOWOYE OLUWATOYOSI",
+    ministry: "RCCG",
     country: "Nigeria",
     image: "/guest/guest3.jpeg",
     bio: "A dynamic worship pastor and music director whose ministry focuses on contemporary worship that honors Christ. Tunde has trained countless worship leaders across West Africa.",
@@ -58,7 +58,7 @@ export const guestMinisters: GuestMinister[] = [
   },
   {
     id: 4,
-    name: "Mercy Adeyemi",
+    name: "KOLEOLA MOSES",
     ministry: "The Redeemed Fellowship",
     country: "South Africa",
     image: "/guest/guest1.jpeg",

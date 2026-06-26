@@ -25,36 +25,31 @@ export function CTA() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.25}>
+        {/* <Reveal delay={0.25}>
           <blockquote className="mx-auto mt-12 max-w-3xl border-y border-border/60 py-10">
             <p className="font-display text-2xl italic leading-relaxed text-ink sm:text-3xl lg:text-4xl">
               "Together, let's worship, unite, and illuminate the world for
               Christ."
             </p>
           </blockquote>
-        </Reveal>
+        </Reveal> */}
 
         <Reveal delay={0.35}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col gap-4 ">
             <a
               href="/register"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-glow px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04] active:scale-[0.97]"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-glow px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04] active:scale-[0.97] justify-center "
             >
               Register Now
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-card px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-card px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-primary/40 hover:text-primary justify-center"
             >
               Become a Partner
             </a>
-            <a
-              href="mailto:hello@whiteworship.org"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-ink-soft transition-colors hover:text-primary"
-            >
-              Contact Us
-            </a>
+          
           </div>
         </Reveal>
       </div>

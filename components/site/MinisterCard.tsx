@@ -35,7 +35,7 @@ export function MinisterCard({
           src={minister.image}
           alt={minister.name}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
         />
         {/* Overlay */}
         {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" /> */}

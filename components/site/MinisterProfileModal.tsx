@@ -29,10 +29,14 @@ export function MinisterProfileModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
         className="
-          w-[95vw]
+          w-[98vw]
+          sm:w-[95vw]
           max-w-5xl
-          overflow-hidden
-          rounded-3xl
+          max-h-[90vh]
+          overflow-y-auto
+          overflow-x-hidden
+          rounded-2xl
+          sm:rounded-3xl
           border border-white/10
           bg-[#090F1C]
           p-0
@@ -85,7 +89,7 @@ export function MinisterProfileModal({
 
               <div className="relative z-10 flex flex-col md:flex-row">
                 {/* IMAGE */}
-                <div className="relative h-[320px] w-full md:h-auto md:w-[340px] lg:w-[400px] flex-shrink-0">
+                <div className="relative h-[280px] sm:h-[320px] w-full md:h-auto md:w-[340px] lg:w-[400px] flex-shrink-0">
                   <Image
                     src={minister.image}
                     alt={minister.name}
@@ -98,17 +102,17 @@ export function MinisterProfileModal({
                 </div>
 
                 {/* CONTENT */}
-                <div className="flex flex-1 flex-col p-6 md:p-10">
+                <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-10">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-blue-400">
+                    <p className="text-[0.7rem] uppercase tracking-[0.35em] text-blue-400">
                       Guest Minister
                     </p>
 
-                    <h2 className="mt-3 font-display text-3xl font-semibold text-white lg:text-5xl">
+                    <h2 className="mt-3 font-display text-2xl sm:text-3xl font-semibold text-white lg:text-5xl">
                       {minister.name}
                     </h2>
 
-                    <p className="mt-3 text-lg font-medium text-blue-400">
+                    <p className="mt-3 text-base sm:text-lg font-medium text-blue-400">
                       {minister.ministry}
                     </p>
 
@@ -118,29 +122,29 @@ export function MinisterProfileModal({
                   </div>
 
                   {/* Bio */}
-                  <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                    <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+                  <div className="mt-6 sm:mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6">
+                    <h3 className="mb-3 sm:mb-4 text-[0.7rem] sm:text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
                       Biography
                     </h3>
 
-                    <p className="leading-8 text-white/75">
+                    <p className="leading-6 sm:leading-8 text-white/75">
                       {minister.bio}
                     </p>
                   </div>
 
                   {/* Scripture */}
-                  <div className="mt-8 border-l-2 border-blue-400 pl-5">
-                    <p className="text-lg italic leading-8 text-white/70">
+                  <div className="mt-6 sm:mt-8 border-l-2 border-blue-400 pl-4 sm:pl-5">
+                    <p className="text-base sm:text-lg italic leading-6 sm:leading-8 text-white/70">
                       &ldquo;{minister.scripture}&rdquo;
                     </p>
 
-                    <p className="mt-4 text-xs uppercase tracking-[0.3em] text-blue-400/70">
+                    <p className="mt-3 sm:mt-4 text-[0.7rem] sm:text-xs uppercase tracking-[0.3em] text-blue-400/70">
                       Scripture
                     </p>
                   </div>
 
                   {/* Divider */}
-                  <div className="my-8 border-t border-white/10" />
+                  <div className="my-6 sm:my-8 border-t border-white/10" />
 
                   {/* Socials */}
                   <div className="flex gap-3">

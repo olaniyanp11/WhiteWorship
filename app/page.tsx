@@ -20,8 +20,6 @@ export default function HomePage() {
       <Theme />
       <Attend />
       <GuestMinisters />
-      
-      <CTA />
     </PageShell>
   );
 }
