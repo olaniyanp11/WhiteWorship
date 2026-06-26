@@ -38,7 +38,7 @@ export function MinisterCard({
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" /> */}
       </div>
 
       {/* Content Container */}

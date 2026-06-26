@@ -42,7 +42,7 @@ export function VisionMission() {
           <Reveal className="col-span-1 row-span-2">
             <article className="relative h-full min-h-[460px] overflow-hidden rounded-2xl border border-white/[0.08]">
               <Image
-                src="/images/aboutus.jpg"
+                src="/images/vision.jpg"
                 alt="Worship gathering with raised hands"
                 fill
                 className="object-cover opacity-45"

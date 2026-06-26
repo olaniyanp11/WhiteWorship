@@ -19,7 +19,7 @@ export const guestMinisters: GuestMinister[] = [
     name: "Folarin Ayodeji",
     ministry: "Pastor Askerr",
     country: "Nigeria",
-    image: "/images/about.jpg",
+    image: "/guest/guest4.jpeg",
     bio: "A gifted worship leader and songwriter with a passion for authentic worship encounters. Folarin has led worship experiences across Africa and Europe, touching thousands with the presence of God through music.",
     scripture: "Yet a time is coming and has now come when the true worshippers will worship the Father in Spirit and in truth.",
     socials: {
@@ -33,7 +33,7 @@ export const guestMinisters: GuestMinister[] = [
     name: "Ayo Olanrewaju",
     ministry: "Grace International Church",
     country: "United Kingdom",
-    image: "/images/about.jpg",
+    image: "/guest/guest2.jpeg",
     bio: "An anointed minister known for prophetic worship and deep spiritual encounters. Ayo's ministry combines music, prayer, and the Word of God to create transformative worship experiences.",
     scripture: "Sing to the Lord a new song; sing his praise from the ends of the earth.",
     socials: {
@@ -47,7 +47,7 @@ export const guestMinisters: GuestMinister[] = [
     name: "Tunde Oladele",
     ministry: "Hillsong Lagos",
     country: "Nigeria",
-    image: "/images/about.jpg",
+    image: "/guest/guest3.jpeg",
     bio: "A dynamic worship pastor and music director whose ministry focuses on contemporary worship that honors Christ. Tunde has trained countless worship leaders across West Africa.",
     scripture: "Let everything that has breath praise the Lord. Praise the Lord.",
     socials: {
@@ -61,7 +61,7 @@ export const guestMinisters: GuestMinister[] = [
     name: "Mercy Adeyemi",
     ministry: "The Redeemed Fellowship",
     country: "South Africa",
-    image: "/images/about.jpg",
+    image: "/guest/guest1.jpeg",
     bio: "An internationally recognized gospel artist whose soulful voice carries the message of redemption. Mercy combines traditional and contemporary styles to create worship that transcends cultural boundaries.",
     scripture: "I will sing of the Lord's great love forever; with my mouth I will make your faithfulness known through all generations.",
     socials: {

@@ -2,29 +2,46 @@
 
 import { ArrowRight, Play, Heart, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-
-import {motion} from "framer-motion"
-
+import { motion } from "framer-motion";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoError, setVideoError] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleCanPlayThrough = () => {
-      console.log("Video can play through");
+    const attemptPlay = () => {
       video.play().catch(err => {
-        console.error("Play error:", err);
-        setVideoError(true);
+        console.warn("Video autoplay blocked:", err);
       });
     };
 
-    video.addEventListener("canplaythrough", handleCanPlayThrough);
-    
-    return () => video.removeEventListener("canplaythrough", handleCanPlayThrough);
+    const handleCanPlay = () => {
+      setIsVideoLoaded(true);
+      attemptPlay();
+    };
+
+    const handleError = () => {
+      console.error("Video failed to load");
+      setVideoError(true);
+    };
+
+    video.addEventListener("canplay", handleCanPlay);
+    video.addEventListener("error", handleError);
+
+    // Try playing immediately if ready
+    if (video.readyState >= 3) {
+      setIsVideoLoaded(true);
+      attemptPlay();
+    }
+
+    return () => {
+      video.removeEventListener("canplay", handleCanPlay);
+      video.removeEventListener("error", handleError);
+    };
   }, []);
 
   return (
@@ -32,21 +49,20 @@ export function Hero() {
       id="home"
       className="relative isolate flex min-h-screen w-full items-center overflow-hidden"
     >
+      {/* Fallback image (always behind) */}
 
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          src="/videos/main.mp4"
-          className="absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-1000 "
-          onError={() => {
-            console.error("Video error");
-            setVideoError(true);
-          }}
-        />
+
+      {/* Video background */}
+      <video
+        className="absolute inset-0 z-10 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls
+        poster="/images/aboutus.jpg"
+      src="/main.mp4"
+       />
 
       {/* Gradient + light overlays */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0b1a2c]/85 via-[#0b1a2c]/55 to-[#0b1a2c]/90" />

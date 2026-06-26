@@ -24,6 +24,7 @@ export function GuestMinisters() {
         <div className="absolute -right-32 bottom-1/3 h-96 w-96 rounded-full bg-primary-glow/10 blur-3xl opacity-20" />
       </div>
 
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Section Header */}
         <Reveal className="mx-auto max-w-3xl text-center">
@@ -39,7 +40,6 @@ export function GuestMinisters() {
             united by one purpose—to glorify Christ through worship.
           </p>
         </Reveal>
-
         {/* Ministers Grid */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {guestMinisters.map((minister, index) => (

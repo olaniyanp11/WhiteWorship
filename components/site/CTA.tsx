@@ -37,7 +37,7 @@ export function CTA() {
         <Reveal delay={0.35}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#"
+              href="/register"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-glow px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04] active:scale-[0.97]"
             >
               Register Now

@@ -5,27 +5,7 @@ import { useState } from "react";
 
 const ROLES = [
   {
-    title: "Worship Team",
-    description: "Musicians, singers & vocalists",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-        <path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
-      </svg>
-    ),
-  },
-  {
-    title: "Media & Sound",
-    description: "Sound, lighting & live streaming",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-        <line x1="12" y1="19" x2="12" y2="23" /><line x1="8" y1="23" x2="16" y2="23" />
-      </svg>
-    ),
-  },
-  {
-    title: "Ushering & Hospitality",
+    title: "Ushering",
     description: "Welcome & guest experience",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
@@ -35,12 +15,31 @@ const ROLES = [
     ),
   },
   {
-    title: "Communications",
-    description: "Social media & content creation",
+    title: "Protocol",
+    description: "Event protocol & coordination",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-        <circle cx="12" cy="12" r="2" />
-        <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Sanitation",
+    description: "Cleanliness & hygiene",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M19.5 14.25v-1.5a3 3 0 0 0-3-3h-9a3 3 0 0 0-3 3v1.5" />
+        <path d="M4.5 14.25V18a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-3.75" />
+        <path d="M9 10.5V7.5a3 3 0 0 1 6 0v3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Welfare",
+    description: "Care & support for attendees",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
       </svg>
     ),
   },
@@ -193,10 +192,10 @@ export default function Volunteer() {
                       className={`${inputBase} appearance-none pr-10 [&>option]:bg-[#0d1829] [&>option]:text-white`}
                     >
                       <option value="" disabled>Select a role…</option>
-                      <option value="worship">Worship Team</option>
-                      <option value="media">Media & Sound</option>
-                      <option value="hospitality">Ushering & Hospitality</option>
-                      <option value="communications">Communications</option>
+                      <option value="ushering">Ushering</option>
+                      <option value="protocol">Protocol</option>
+                      <option value="sanitation">Sanitation</option>
+                      <option value="welfare">Welfare</option>
                       <option value="other">Other</option>
                     </select>
                     <svg
