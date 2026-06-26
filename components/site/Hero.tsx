@@ -59,9 +59,8 @@ export function Hero() {
         muted
         loop
         playsInline
-        controls
         poster="/images/aboutus.jpg"
-      src="/main.mp4"
+      src="/videos/main.mp4"
        />
 
       {/* Gradient + light overlays */}
