@@ -38,48 +38,32 @@ export function Theme() {
       <div className="relative mx-auto max-w-5xl px-6 text-center lg:px-10">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.3em] text-white/85 backdrop-blur">
-            <Sun className="h-3.5 w-3.5" /> Annual Theme
+            <Sun className="h-3.5 w-3.5" /> Annual Theme 2026
           </span>
         </Reveal>
 
         <Reveal delay={0.1}>
           <h2 className="mt-8 font-display text-5xl leading-[1.05] sm:text-7xl lg:text-[6.5rem]">
-            <span className="text-shimmer">WHITE WORSHIP</span>
+            <span className="text-shimmer">Open Heaven (Anoigo)</span>
             <br />
-            <span className="text-white">2026</span>
+           
           </h2>
         </Reveal>
 
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-8 max-w-2xl text-lg text-white/80 sm:text-xl">
-            Theme:{" "}
-            <span className="font-display italic text-white">
-              Open Heaven (Anoigo)
-            </span>{" "}
-            — Matthew 3:16
-          </p>
-        </Reveal>
+       
 
         <Reveal delay={0.3}>
           <blockquote className="mx-auto mt-14 max-w-3xl">
-            <p className="font-display text-2xl italic leading-relaxed text-white/95 sm:text-3xl lg:text-4xl">
-              "Arise, shine; for thy light is come, and the glory of the Lord
-              is risen upon thee."
+            <p className="font-display text-md italic leading-relaxed text-white/95l lg:text-xl">
+              “As soon as Jesus was baptized, he went up out of the water. At that moment heaven was opened, and he saw the Spirit of God descending like a dove and alighting on him” 
             </p>
             <footer className="mt-4 text-sm uppercase tracking-[0.3em] text-primary-glow">
-              Isaiah 60:1
+             (Matthew 3:16 NIV) 
             </footer>
           </blockquote>
         </Reveal>
 
-        <Reveal delay={0.4}>
-          <p className="mx-auto mt-16 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
-            The{" "}
-            <span className="font-display text-white">IMOLE LIGHT</span>{" "}
-            vision represents the call for believers to shine as lights in a
-            world seeking hope, truth, and salvation through Jesus Christ.
-          </p>
-        </Reveal>
+     
       </div>
     </section>
   );

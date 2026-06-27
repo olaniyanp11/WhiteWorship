@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const links = [
   { href: "/#home", label: "Home" },
-  { href: "/#vision", label: "About Us (Vision)" },
+  { href: "/#vision", label: "About Us " },
   { href: "/volunteer", label: "Become a Volunteer" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact Us" },
@@ -76,7 +76,7 @@ export function Navbar() {
           href="#contact"
           className="hidden lg:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-glow px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform duration-300 hover:scale-[1.04] active:scale-[0.98]"
         >
-          Join WHITE
+          Register
         </a>
 
         <button
@@ -117,7 +117,7 @@ export function Navbar() {
                   href="#contact"
                   className="block rounded-xl bg-gradient-to-r from-primary to-primary-glow px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
                 >
-                  Join WHITE
+               Register
                 </a>
               </li>
             </ul>

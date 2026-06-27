@@ -3,12 +3,8 @@ import Image from "next/image";
 import { Mail } from "lucide-react";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#vision", label: "Vision" },
-  { href: "#experience", label: "Experience" },
-  { href: "#theme", label: "Theme" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#vision", label: "About" },
 ];
 
 // const socials = [
@@ -80,7 +76,7 @@ export function Footer() {
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-glow px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.04]"
               >
-                Join WHITE
+                Register
               </a>
             </li>
           </ul>

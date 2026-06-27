@@ -95,7 +95,7 @@ export function MinisterProfileModal({
                     alt={minister.name}
                     fill
                     priority
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090F1C] via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#090F1C]/30" />

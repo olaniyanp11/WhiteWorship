@@ -6,9 +6,35 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoSrc, setVideoSrc] = useState<string>("/videos/main-mobile.mp4");
   const [videoError, setVideoError] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
+  // Determine video source based on screen width
+  const updateVideoSource = () => {
+    const width = window.innerWidth;
+    const newSrc = width < 768 
+      ? "/videos/mobile.mp4"   // Mobile only
+      : "/videos/main.mp4"; // Tablet + Desktop
+
+    if (newSrc !== videoSrc) {
+      setVideoSrc(newSrc);
+    }
+  };
+
+  useEffect(() => {
+    // Initial check
+    updateVideoSource();
+
+    // Listen for resize
+    window.addEventListener("resize", updateVideoSource);
+
+    return () => {
+      window.removeEventListener("resize", updateVideoSource);
+    };
+  }, [videoSrc]);
+
+  // Video playback logic
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -25,14 +51,19 @@ export function Hero() {
     };
 
     const handleError = () => {
-      console.error("Video failed to load");
+      console.error("Video failed to load:", videoSrc);
       setVideoError(true);
     };
 
     video.addEventListener("canplay", handleCanPlay);
     video.addEventListener("error", handleError);
 
-    // Try playing immediately if ready
+    // Force reload when source changes
+    if (video.src !== videoSrc) {
+      video.src = videoSrc;
+      video.load();
+    }
+
     if (video.readyState >= 3) {
       setIsVideoLoaded(true);
       attemptPlay();
@@ -42,32 +73,37 @@ export function Hero() {
       video.removeEventListener("canplay", handleCanPlay);
       video.removeEventListener("error", handleError);
     };
-  }, []);
+  }, [videoSrc]);
 
   return (
     <section
       id="home"
       className="relative isolate flex min-h-screen w-full items-end overflow-hidden"
     >
-      {/* Fallback image (always behind) */}
+      {/* Fallback image */}
+      <img
+        src="/images/aboutus.jpg"
+        alt="Background"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+      />
 
-
-      {/* Video background */}
+      {/* Responsive Video Background */}
       <video
+        ref={videoRef}
+        key={videoSrc} // Important: forces re-mount when src changes
         className="absolute inset-0 z-10 h-full w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
         poster="/images/aboutus.jpg"
-      src="/videos/main.mp4"
-       />
+        src={videoSrc}
+      />
 
       {/* Gradient + light overlays */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0b1a2c]/1 via-[#040b11]/0 to-[#040b11]" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#173e5f]/80 to-[#173e5f]" />
       <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(48,157,222,0.35),transparent_70%)]" />
 
-     
       <div className="relative z-20 mx-auto w-full max-w-7xl px-4 pb-16 pt-0 sm:px-6 sm:pb-20 lg:px-10 lg:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -82,24 +118,6 @@ export function Hero() {
           <h1 className="mt-6 font-display text-3xl leading-[1.05] text-white sm:mt-8 sm:text-5xl lg:text-[5.5rem]">
             WHITEWORSHIP <span className="text-shimmer">2026</span>
           </h1>
-
-          {/* <p className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl">
-            A Global Worship Experience United by Christ. WHITE gathers
-            believers — across tribe, denomination, language and background —
-            into sincere, unhindered worship that transforms lives through
-            His presence.
-          </p> */}
-
-          {/* <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-10 grid gap-3 font-display text-3xl text-white/95 sm:text-4xl lg:text-5xl"
-          >
-            <span>Experience Worship.</span>
-            <span className="text-shimmer">Encounter God.</span>
-            <span>Illuminate the World.</span>
-          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -120,7 +138,6 @@ export function Hero() {
             >
               <Play className="h-4 w-4" /> Watch Online
             </a>
-          
           </motion.div>
         </motion.div>
       </div>

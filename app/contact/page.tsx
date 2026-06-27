@@ -68,12 +68,12 @@ const socials = [
 const contactInfo = [
   { icon: <Mail size={16} />, label: "Email", value: "hello@whiteworship.org" },
   { icon: <Phone size={16} />, label: "Phone", value: "+234 800 WORSHIP" },
-  { icon: <MapPin size={16} />, label: "Base", value: "Rccg Chapel of glory, Ogaga Street, Lagos" },
+  { icon: <MapPin size={16} />, label: "Base", value: "Rccg Chapel of glory,  Lagos" },
   { icon: <Clock size={16} />, label: "Response time", value: "Within 24–48 hours" },
 ];
 const GOOGLE_MAPS_LINK =
   "https://www.google.com/maps?q=6.664136607601727,3.2799124234777706";
-  
+
 export default function Contact() {
   const [form, setForm] = useState<FormState>({
     firstName: "", lastName: "", email: "", subject: "", message: "",
